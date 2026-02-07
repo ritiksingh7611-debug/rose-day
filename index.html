@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rose Day 🌹</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Music -->
+<audio id="bgMusic" src="music.mp3" loop></audio>
+
+<!-- Petals container -->
+<div class="petals"></div>
+
+<!-- Reel frame -->
+<div class="reel">
+
+  <div class="card">
+
+    <!-- STEP 1 -->
+    <div class="step active" id="step1">
+      <div class="rose">🌹</div>
+      <h2>Wait!</h2>
+      <p>Who should I give this rose to?</p>
+      <input type="text" id="nameInput" placeholder="Enter name...">
+      <button onclick="giveRose()">Give Rose 🌹</button>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" id="step2">
+      <div class="rose glow">🌹</div>
+      <p class="loading">GROWING YOUR ROSE...</p>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step" id="step3">
+      <div class="rose glow">🌹</div>
+      <h2>For You, <span id="finalName"></span></h2>
+      <p>Will you accept this rose and be my favorite person?</p>
+
+      <div class="buttons">
+        <button class="yes" onclick="yesClicked()">Yes, I will! ❤️</button>
+        <button class="no" onmouseover="moveNo()">No</button>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step" id="step4">
+      <div class="rose glow">🌹</div>
+      <h2>Happy Rose Day 💖</h2>
+
+      <p class="quote">
+        Just like this rose, my feelings for you<br>
+        grow more beautiful every single day.
+      </p>
+
+      <p class="quote fade">
+        This rose will never wilt,<br>
+        because it carries my heart with it 🌹❤️
+      </p>
+
+      <button onclick="restart()">See it again ✨</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
